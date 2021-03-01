@@ -2,7 +2,7 @@ import { Request, response, Response } from "express";
 import { getCustomRepository } from "typeorm";
 import { SurveysRepository } from "../repositories/SurveysRepository";
 
-class SurveysControllers {
+class SurveysController {
   async create(req: Request, res: Response) {
     const { title, description } = req.body;
 
@@ -21,4 +21,4 @@ class SurveysControllers {
     return res.json(all);
   }
 }
-export { SurveysControllers };
+export { SurveysController };
